@@ -74,11 +74,12 @@ app.post("/bmi", (req, res) => {
  *    For women: BMR = 655.1 + (9.563 * weight in kg) + (1.850 * height in cm) - (4.676 * age)
  *
  *  Calculate Calories:
- *    Sedentary (little or no exercise): calories = BMR × 1.2;
- *    Lightly active (light exercise/sports 1-3 days/week): calories = BMR × 1.375;
- *    Moderately active (moderate exercise/sports 3-5 days/week): calories = BMR × 1.55;
- *    Very active (hard exercise/sports 6-7 days a week): calories = BMR × 1.725; and
- *    Extremely active (very hard exercise/sports & a physical job): calories = BMR × 1.9.
+ *    Sedentary: calories = BMR × 1.2;
+ *    Lightly active: calories = BMR × 1.375;
+ *    Moderately active: calories = BMR × 1.55;
+ *    Very active: calories = BMR × 1.725;
+ *    Extremely active: calories = BMR × 1.9; and
+ *    Professional Athlete: calories = BMR × 2.3.
  *
  * Expected Req Body:
  * {

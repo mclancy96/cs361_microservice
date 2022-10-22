@@ -28,26 +28,6 @@ const activityLevelMultiplier = [1.2, 1.375, 1.55, 1.725, 1.9, 2.3];
  * {
  *  "bmi": Float
  * }
- * =======================================
- * ========Example Python Request=========
- * =======================================
- *
-    import requests
-    import json
-
-
-    def test():
-        url = 'http://localhost:3001'
-        route = "/bmi"
-        myobj = {
-            "weight": 72.57,
-            "height": 1.78,
-            "convertToMetric": False
-        }
-        headers = {'content-type': 'application/json'}
-        res = requests.post(url+route, data=json.dumps(myobj), headers=headers)
-        resParse = json.loads(res.text)
-        bmi = resParse["bmi"]
  */
 app.post("/bmi", (req, res) => {
   try {
@@ -99,7 +79,7 @@ app.post("/bmi", (req, res) => {
  *    Moderately active (moderate exercise/sports 3-5 days/week): calories = BMR × 1.55;
  *    Very active (hard exercise/sports 6-7 days a week): calories = BMR × 1.725; and
  *    Extremely active (very hard exercise/sports & a physical job): calories = BMR × 1.9.
- * 
+ *
  * Expected Req Body:
  * {
  *  weight: Integer
@@ -108,7 +88,7 @@ app.post("/bmi", (req, res) => {
  *  age: Integer
  *  activity_level: Integer (see below)
  * }
- * 
+ *
  * Activity Levels:
  * 0 Sedentary (little or no exercise)
  * 1 Lightly active (light exercise/sports 1-3 days/week)
@@ -122,30 +102,7 @@ app.post("/bmi", (req, res) => {
  *  "bmr": Float,
  *  "calories", Float
  * }
- * 
- * =======================================
- * ========Example Python Request=========
- * =======================================
  *
-    import requests
-    import json
-
-
-    def test():
-        url = 'http://localhost:3001'
-        route = "/calories"
-        myobj = {
-            "weight": 72.57,
-            "height": 1.78,
-            "sex": "male",
-            "age": 24,
-            "activity_level": 4
-        }
-        headers = {'content-type': 'application/json'}
-        res = requests.post(url+route, data=json.dumps(myobj), headers=headers)
-        resParse = json.loads(res.text)
-        bmr = resParse["bmr"]
-        calories = resParse["calories"]
  */
 app.post("/calories", (req, res) => {
   try {

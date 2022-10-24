@@ -6,6 +6,8 @@ This Node/Express server is used to receive HTTP requests for BMI and BMR and ca
 
 This route will take the passed data req and send a res body containing the bmi based on those factors.
 
+![bmi sequence diagram](microservice_uml-Request.png)
+
 Formulae:
 
 - Metric:
@@ -56,6 +58,8 @@ def test():
 ## POST /calories
 
 This route will take the passed data req and send a res body containing the calories based on those factors. This uses the Harris-Benedict equation to calculate the calories needed to maintain the basal metabolic rate based on the values passed.
+
+![calorie sequence diagram](/microservice_uml-calories.png)
 
 Formulae:
 
